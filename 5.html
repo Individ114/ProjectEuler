@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <title>Project Euler</title>
+      </head>
+      <body>
+            <script>
+                  /*  Задача №5
+                          Наименьшее кратное
+                          2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
+                          Какое самое маленькое число делится нацело на все числа от 1 до 20? */
+                  var y = 0;
+                  var x = 1;
+                  while (x > 0) {
+                        y += 20;
+                        x =
+                              (y % 19) +
+                              (y % 18) +
+                              (y % 17) +
+                              (y % 16) +
+                              (y % 15) +
+                              (y % 14) +
+                              (y % 13) +
+                              (y % 12) +
+                              (y % 11) +
+                              (y % 9) +
+                              (y % 8) +
+                              (y % 7) +
+                              (y % 6) +
+                              (y % 5) +
+                              (y % 4) +
+                              (y % 3) +
+                              (y % 2);
+                  }
+                  console.log(`${y} ${x}`);
+            </script>
+      </body>
+</html>
