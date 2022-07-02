@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <title>Project Euler</title>
+      </head>
+      <body>
+            <script>
+                  /* Задача 4
+                  Наибольшее произведение-палиндром
+                  Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково. Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99.
+                  Найдите самый большой палиндром, полученный умножением двух трехзначных чисел. */
+                  var number = 1000000;
+                  for (i = 1000000; i > 0; i--) {
+                        i = String(i);
+                        if (i[0] === i[5] && i[1] === i[4] && i[2] === i[3]) {
+                              i = Number(i);
+                              for (j = 999; j > 100; j--) {
+                                    var y = i / j;
+                                    y = String(y);
+                                    if (y.length === 3) {
+                                          console.log(i, j, y);
+                                    }
+                              }
+                              i = Number(i);
+                        } else {
+                              i = Number(i);
+                        }
+                  }
+            </script>
+      </body>
+</html>
