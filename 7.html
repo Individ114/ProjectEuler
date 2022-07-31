@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1.0"
+            />
+            <title>Project Euler</title>
+      </head>
+      <body>
+            <script>
+                  // Задача 7
+                  // 10001-е простое число
+                  // Выписав первые шесть простых чисел, получим 2, 3, 5, 7, 11 и 13. Очевидно, что 6-е простое число - 13.
+                  // Какое число является 10001-м простым числом?
+
+                  var time = performance.now();
+                  let arr = [];
+
+                  for (let i = 1; ; i += 1) {
+                        let z = 0;
+                        if (i % 2 !== 0) {
+                              z = i / 2 - 0.5;
+                        }
+                        for (let j = 2; j < i + 1; j += 1) {
+                              if (j === i || j === z) {
+                                    arr.push(i);
+                                    break;
+                              }
+                              if (i % j === 0) break;
+                        }
+                        if (arr.length === 10001) break;
+                  }
+                  console.log(arr);
+                  time = performance.now() - time;
+                  console.log("Время выполнения = ", time);
+            </script>
+      </body>
+</html>
